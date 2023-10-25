@@ -6,7 +6,22 @@
 
 export function getAllDepositsGreaterThanOneHundred(array) {
   // Your code goes here...
+  var depositContainer = [];
 
+  for(var i = 0; i<array.length; i++)
+  {
+    if(array[i]["deposits"] !== undefined)
+    {
+    for(var j = 0; j<array[i]["deposits"].length; j++){
+
+      if(array[i]["deposits"][j] > 100){
+          depositContainer.push(array[i]["deposits"][j]);
+      }
+
+    }
+  }
+}
+  return depositContainer;
 }
 
 

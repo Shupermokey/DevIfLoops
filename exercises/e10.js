@@ -5,6 +5,14 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
+  var accountContainer = [];
+  for(var i = 0; i < array.length; i++){
+    if(array[i]["name"].includes(letter.toLowerCase()) || array[i]["name"].includes(letter.toUpperCase())  ){
+      accountContainer.push(array[i]["name"]);
+    }
+  }
+
+  return accountContainer;
 
 }
 

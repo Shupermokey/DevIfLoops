@@ -6,6 +6,21 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
+  var bankAccountContainer = [];
+  var bankAccountBalance=9999999999999;
+  
+  for(var i = 0; i<array.length; i++){
+   
+    if(array[i]["balance"] > 0 && array[i]["balance"] < bankAccountBalance){
+      if(bankAccountContainer.length > 0){
+        bankAccountContainer.pop();
+      }
+      bankAccountBalance = array[i]["balance"];
+      bankAccountContainer.push(array[i]);
+    }
+    
+  }
+  return bankAccountContainer;
   
 }
 

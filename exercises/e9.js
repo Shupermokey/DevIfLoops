@@ -6,6 +6,18 @@
 
 export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
+  var bankAccountContainer = [];
+  var bankAccountBalance=100;
+  
+  for(var i = 0; i<array.length; i++){
+   
+    if(array[i]["balance"] > 0 && array[i]["balance"] > bankAccountBalance){
+      bankAccountBalance = array[i]["balance"];
+      bankAccountContainer.push(array[i]);
+    }
+    
+  }
+  return bankAccountContainer;
 
 }
 
