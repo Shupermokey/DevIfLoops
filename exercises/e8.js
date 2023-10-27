@@ -6,17 +6,13 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-  var bankAccountContainer = [];
-  var bankAccountBalance=0;
+  let bankAccountContainer = [];
+  let bankAccountBalance=array[0].balance;
   
-  for(var i = 0; i<array.length; i++){
-   
-    if(array[i]["balance"] > 0 && array[i]["balance"] > bankAccountBalance){
-      if(bankAccountContainer.length > 0){
-        bankAccountContainer.pop();
-      }
-      bankAccountBalance = array[i]["balance"];
-      bankAccountContainer.push(array[i]);
+  for(let i = 0; i < array.length; i++){
+    if(array[i].balance > 0 && array[i].balance> bankAccountBalance){
+      bankAccountBalance = array[i].balance;
+      bankAccountContainer[0]=(array[i]);
     }
     
   }

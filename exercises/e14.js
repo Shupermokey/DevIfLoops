@@ -6,18 +6,14 @@
 
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
-  var bankAccountContainers = [];
-  for (var i = 0; i < array.length; i++) {
-    var d = array[i]["deposits"];
-    var w = array[i]["withdrawals"];
-    var b = array[i]["balance"];
+  let bankAccountContainers = [];
+  for (let i = 0; i < array.length; i++) {
+    let d = array[i].deposits;
+    let w = array[i].withdrawals;
+    let b = array[i].balance;
 
-    console.log("Deposists " + d);
-    console.log("Withdrawls " + w);
-    console.log("Balance " + b);
-
-    var withdrawals = 0;
-    var deposits = 0;
+    let withdrawals = 0;
+    let deposits = 0;
 
     withdrawals = sumOfLoop(w);
     deposits = sumOfLoop(d);
@@ -31,12 +27,12 @@ export function getClientsWithWrongBalance(array) {
 }
 
 function sumOfLoop(arr) {
-  var sum = 0;
+  let sum = 0;
   if(arr === undefined){
     return sum;
   }
 
-  for (var j = 0; j < arr.length; j++) {
+  for (let j = 0; j < arr.length; j++) {
     sum += arr[j];
   }
 

@@ -7,10 +7,10 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-  var flatArr = [];
-  for(var i = 0; i< array.length; i++){
+  let flatArr = [];
+  for(let i = 0; i< array.length; i++){
 
-    for(var j = 0; j < array[i].length; j++){
+    for(let j = 0; j < array[i].length; j++){
       flatArr.push(array[i][j]);
     }
   }

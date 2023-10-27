@@ -6,16 +6,13 @@
 export function getClientWithNoMoney(array) {
   // Your code goes here...
 
-  var bankAccountContainer = [];
-  for(var i = 0; i<array.length; i++){
-   
-    if(array[i]["balance"] === 0){
-      bankAccountContainer.push(array[i]["name"]);
+  let bankAccountContainer = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance === 0) {
+      bankAccountContainer.push(array[i].name);
     }
-    
   }
   return bankAccountContainer;
-
 }
 
 // === TEST YOURSELF ===
